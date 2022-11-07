@@ -1,0 +1,82 @@
+.loginScreenContainer {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background-image: url(../background/IM5.png);
+  background-size:cover;
+  background-color:#36393f;
+}
+
+.loginScreen {
+  position: relative;
+  width: 380px;
+  height: 350px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+
+  }
+  .loginScreen::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #eee, #eee);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+  }
+  
+  .loginScreen::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #eee, #eee);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .loginScreenForm {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #36393f;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loginScreenTitle {
+    color: #eee;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0.1em;
+  }
+  
+  .loginScreenForgotpassword {
+    font-size: 0.7rem;
+  }
+  
+  .loginScreenSubtext {
+    font-size: 0.7rem;
+    display: block;
+    margin: 0.5rem 0;
+    color: #eee;
+  }
